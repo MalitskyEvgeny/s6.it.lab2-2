@@ -26,15 +26,34 @@
             dataType: "html",
             success: funcSuccess
         })
-        setInterval(checkReplyes, 5000)
+        setInterval(checkReplyes, 10000)
     })
 
+    function set_update(data){
+        data = $.parseJSON(data)
+        for (let index = 0; index < data.length; index++) {
+            if (data[index] != "") {
+                let v = $("#" + (index + 1).toString()).children(".PostContent").children(".replies")
+                v.children(":first-child").text(data[index][1])
+                v.children(":last-child").text(data[index][0])
+            } 
+        }
+    }
+
     function checkReplyes(){
-        var mas = []
+        var mas = ""
         $(".replies").children(":last-child").toArray().forEach(element => {
-            mas.push(element.textContent + ";")
+            mas += (element.textContent + ";")
         }); 
-        console.log(mas)
+        $.ajax({
+            url: "check_update.php",
+            type: "GET",
+            data: ({
+                r: mas
+            }),
+            dataType: "html",
+            success: set_update
+        })
     }
 
     function funcSuccess(data) {

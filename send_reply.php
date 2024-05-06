@@ -22,9 +22,7 @@
     $r_ = fgetcsv($f, 10000, ';');
     fclose($f);
     $f = fopen($filename, 'w');
-    var_dump($r_);
     $r_[$i_new-1] = $time_;
-    var_dump($r_);
     fputcsv($f, $r_, ';', eol:'');
     flock($f, LOCK_UN);
     fclose($f);
