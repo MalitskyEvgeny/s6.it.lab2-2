@@ -1,0 +1,86 @@
+.div_replys{
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    width: 50%;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.btn_lock{
+    width: 34px;
+    height: 34px;
+    border: none;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+.PostHeader_text{
+    width: 94%;
+}
+
+.footComments{
+    border-radius: 16px;
+    height: 32px;
+    width: 64px;
+}
+.Post{
+    width: 550px;
+    margin-top: 15px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+.reply_send_button{
+    width: 34px;
+    height: 34px;
+    border: none;
+    text-align: center;
+}
+.reply_wrap{
+    margin-top: 12px;
+}
+.reply_text{
+    width: 80%;
+    height: 34px;
+}
+.foot{
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.PostHeader{
+    padding-left: 20px;
+    padding-top: 16px;
+    padding-right: 20px;
+    display: flex;
+}
+
+.PostHeader > div{
+    font-weight: 600;
+}
+
+.PostHeaderTime{
+    color: rgb(129, 140, 153);
+}
+
+.PostContent{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.reply_wrap{
+    padding-bottom: 12px;
+}
+
+.Wall_text{
+    padding-top: 8px;
+}
+
+body{
+    background-color: rgb(237, 238, 240);
+}
+
+.PostHeaderTime{
+    font-size: 13px;
+    font-weight: 400;
+}
+
